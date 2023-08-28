@@ -1,0 +1,19 @@
+{
+    "dotnet.defaultSolution": "c# software.sln",
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "MySqlConnection",
+            "database": "myshop",
+            "username": "admin",
+            "password": "ademolawaliyu"
+        }
+    ]
+}
