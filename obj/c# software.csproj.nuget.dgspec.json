@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ademo\\Desktop\\c# software\\c# software.csproj": {}
+    "c:\\Users\\ademo\\Desktop\\c# software\\c# software.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ademo\\Desktop\\c# software\\c# software.csproj": {
+    "c:\\Users\\ademo\\Desktop\\c# software\\c# software.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ademo\\Desktop\\c# software\\c# software.csproj",
+        "projectUniqueName": "c:\\Users\\ademo\\Desktop\\c# software\\c# software.csproj",
         "projectName": "c# software",
-        "projectPath": "C:\\Users\\ademo\\Desktop\\c# software\\c# software.csproj",
+        "projectPath": "c:\\Users\\ademo\\Desktop\\c# software\\c# software.csproj",
         "packagesPath": "C:\\Users\\ademo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ademo\\Desktop\\c# software\\obj\\",
+        "outputPath": "c:\\Users\\ademo\\Desktop\\c# software\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ademo\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,23 +38,27 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[6.0.9, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[6.0.9, )"
             },
-            "Microsoft.EntityFrameworkCore.sqlite": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[7.0.10, )"
+              "version": "[6.0.15, )"
             },
-            "pomelo.EntityFrameworkCore.MySql": {
+            "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[5.6.3, )"
+            },
+            "sib_api_v3_sdk": {
+              "target": "Package",
+              "version": "[3.3.0, )"
             }
           },
           "imports": [

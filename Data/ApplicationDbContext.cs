@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-using c__software.Models;
+using PaelystSolution.Models;
 namespace c__software.Data
 {
     public class ApplicationDbContext: DbContext
@@ -14,7 +14,7 @@ namespace c__software.Data
         {
             var connectionString = "server=localhost;user=root;database=node_project";
             
-            ver serverVersion = new MySqlServerVersion(new Version(10, 4, 28));
+            var serverVersion = new MySqlServerVersion(new Version(10, 4, 28));
             optionsBuilder.UseMySql(connectionString, serverVersion);
         }
     }

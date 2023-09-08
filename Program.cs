@@ -1,17 +1,24 @@
-var builder = WebApplication.CreateBuilder(args);
-// var startup = new Startup(builder.configuration);
-// startup.configureService(builder.Services);
-// var app = builder.Build();
-// startup.Configure(app, builder.Environment);
+using Microsoft.EntityFrameworkCore;
+using PaelystSolution.Application.Implementations;
+using PaelystSolution.Application.Interfaces;
+using PaelystSolution.Infrastructure.ApplicationContext;
+using PaelystSolution.Infrastructure.Implementations;
+using PaelystSolution.Infrastructure.Interfaces;
+using PaelystSolution.Infrastructure.Mail;
+using System.Reflection.Metadata;
 
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllersWithViews();
-// builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(
-//             Configuration.GetConnecttionString("DefaultConnection")
-//         ));
-// builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+var connectionString = builder.Configuration.GetConnectionString("PaelystDbConnection");
+builder.Services.AddDbContext<SolutionContext>(options => options.UseSqlServer(connectionString));
+
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IDocumentRepository, DocumentRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IMailService, MailService>();
 
 var app = builder.Build();
 
